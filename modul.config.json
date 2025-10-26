@@ -1,0 +1,153 @@
+{
+  "name": "Szabi Tervező",
+  "slug": "szabi-tervezo",
+  "version": "1.0.0",
+  "category": "hr",
+  "complexity": "simple",
+  "description": "Egyszerű naptár alkalmazás szabadságigények kezelésére. A munkatársak jelezhetik szabadságigényüket, a vezető pedig jóváhagyhatja azokat. Az alkalmazás nyomon követi a hátralévő szabadságkeretet.",
+  "icon": "🏖️",
+  "author": {
+    "name": "ModulSite",
+    "email": "info@modulsite.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Imrushtempo/Modulsite-SzabiTervezo"
+  },
+  "pricing": {
+    "tier": "basic",
+    "basePrice": 4990,
+    "perUserPrice": 0,
+    "tiers": {
+      "free": {
+        "limits": {
+          "users": 3,
+          "requests_per_month": 10,
+          "ai_conflict_detection": false
+        },
+        "features": [
+          "Szabadság naptár",
+          "Kérelem beküldés",
+          "Manager jóváhagyás",
+          "Hátralévő napok követése"
+        ]
+      },
+      "basic": {
+        "limits": {
+          "users": 10,
+          "requests_per_month": 50,
+          "ai_conflict_detection": false
+        },
+        "features": [
+          "Összes Free funkció",
+          "Email értesítések",
+          "Csapat naptár nézet",
+          "Export funkciók"
+        ]
+      },
+      "pro": {
+        "limits": {
+          "users": 50,
+          "requests_per_month": -1,
+          "ai_conflict_detection": true
+        },
+        "features": [
+          "Összes Basic funkció",
+          "AI konfliktus detektálás",
+          "Automatikus helyettesítés javaslat",
+          "Custom szabadság típusok",
+          "Advanced riportok"
+        ]
+      },
+      "enterprise": {
+        "limits": {
+          "users": -1,
+          "requests_per_month": -1,
+          "ai_conflict_detection": true
+        },
+        "features": [
+          "Összes Pro funkció",
+          "Multi-tenant support",
+          "Custom workflows",
+          "Dedikált support",
+          "SLA garancia"
+        ]
+      }
+    }
+  },
+  "features": [
+    "Szabadság kérelem rendszer",
+    "Manager jóváhagyási workflow",
+    "Szabadság egyenleg nyomonkövetés",
+    "Csapat naptár nézet",
+    "Email értesítések",
+    "AI-alapú konfliktus detektálás (Pro+)",
+    "Export funkciók",
+    "Multi-tenant support"
+  ],
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "@supabase/supabase-js": "^2.0.0"
+  },
+  "supabase": {
+    "tables": [
+      "leave_requests",
+      "leave_balance",
+      "leave_types"
+    ],
+    "edge_functions": [
+      "request-leave",
+      "approve-leave",
+      "reject-leave",
+      "get-balance",
+      "check-conflicts"
+    ],
+    "rls_enabled": true
+  },
+  "configFields": [
+    {
+      "key": "defaultLeaveDays",
+      "label": "Alapértelmezett szabadság napok",
+      "type": "number",
+      "default": 20,
+      "required": true,
+      "helpText": "Új munkavállalók éves szabadság kerete"
+    },
+    {
+      "key": "approvalRequired",
+      "label": "Manager jóváhagyás szükséges",
+      "type": "boolean",
+      "default": true,
+      "helpText": "Ha be van kapcsolva, minden kérelem jóváhagyást igényel"
+    },
+    {
+      "key": "minNoticeDays",
+      "label": "Minimális előzetes bejelentés (napokban)",
+      "type": "number",
+      "default": 7,
+      "helpText": "Hány nappal korábban kell bejelenteni a szabadságot"
+    },
+    {
+      "key": "enableAIConflicts",
+      "label": "AI konfliktus detektálás",
+      "type": "boolean",
+      "default": false,
+      "helpText": "Automatikus figyelmeztetés, ha túl sok ember van egyszerre szabadságon (Pro tier)"
+    }
+  ],
+  "screenshots": [
+    "https://raw.githubusercontent.com/Imrushtempo/Modulsite-SzabiTervezo/main/screenshots/calendar.png",
+    "https://raw.githubusercontent.com/Imrushtempo/Modulsite-SzabiTervezo/main/screenshots/request-form.png",
+    "https://raw.githubusercontent.com/Imrushtempo/Modulsite-SzabiTervezo/main/screenshots/balance.png"
+  ],
+  "tags": [
+    "hr",
+    "szabadság",
+    "naptár",
+    "jóváhagyás",
+    "munkavállalók",
+    "magyar"
+  ],
+  "minimumPlatformVersion": "1.0.0"
+}

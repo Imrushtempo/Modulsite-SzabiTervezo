@@ -1,0 +1,5 @@
+{
+  "name": "Szabi Tervező",
+  "description": "Egy egyszerű naptár alkalmazás, ahol a munkatársak jelezhetik szabadságigényüket, a vezető pedig jóváhagyhatja azokat. Az alkalmazás nyomon követi a hátralévő szabadságkeretet, megoldva az Excel táblák okozta káoszt.",
+  "requestFramePermissions": []
+}
