@@ -1,7 +1,7 @@
 {
   "name": "Szabi Tervező",
   "slug": "szabi-tervezo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "category": "hr",
   "complexity": "simple",
   "description": "Egyszerű naptár alkalmazás szabadságigények kezelésére. A munkatársak jelezhetik szabadságigényüket, a vezető pedig jóváhagyhatja azokat. Az alkalmazás nyomon követi a hátralévő szabadságkeretet.",
